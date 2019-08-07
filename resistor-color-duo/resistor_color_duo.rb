@@ -12,9 +12,7 @@ class ResistorColorDuo
     'white'  => '9'
   }
 
-  def self.value(color_array)
-    color_array.map(&COLORS)
-    .join
-    .to_i
+  def self.value(bands)
+    bands.map(&COLORS).join.to_i
   end
 end
