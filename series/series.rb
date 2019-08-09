@@ -6,12 +6,10 @@ class Series
   end
 
   def slices(n)
-    if n > int_series.length
-      raise ArgumentError.new('n must be less than string length')
-    else
-      result = []
-      int_series.split('').each_cons(n) { |x| result << x.join }
-      result
-    end
+    raise ArgumentError if n > int_series.length
+
+    int_series.each_char
+              .each_cons(n)
+              .reduce([]) { |result, sequence| result << sequence.join }
   end
 end
