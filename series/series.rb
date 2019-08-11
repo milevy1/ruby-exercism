@@ -10,6 +10,6 @@ class Series
 
     int_series.each_char
               .each_cons(n)
-              .reduce([]) { |result, sequence| result << sequence.join }
+              .map { |sequence| sequence.join }
   end
 end
