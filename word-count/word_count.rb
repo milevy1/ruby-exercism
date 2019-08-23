@@ -12,10 +12,6 @@ class Phrase
   end
 
   def words
-    input_string.downcase
-                .gsub(/\s'|'\s/, ' ')        # Clean quoted words
-                .gsub(/[^0-9a-z\s,\n']/, '') # Clean special chars
-                .split(/[\s,\n]/)            # Split on spaces and commas
-                .reject(&:empty?)            # Remove empty strings
+    input_string.downcase.scan(/\b[\w']+\b/)
   end
 end
