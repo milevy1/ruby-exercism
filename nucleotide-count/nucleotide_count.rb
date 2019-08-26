@@ -14,7 +14,7 @@ class Nucleotide
   end
 
   def count(strand)
-    dna.split('').count(strand)
+    dna.count(strand)
   end
 
   def histogram
