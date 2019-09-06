@@ -1,4 +1,5 @@
 require 'minitest/autorun'
+require 'minitest/pride'
 require_relative 'isogram'
 
 # Common test data version: 1.7.0 74869e8
