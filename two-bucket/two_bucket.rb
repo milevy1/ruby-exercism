@@ -1,8 +1,27 @@
-=begin
-Write your code for the 'Two Bucket' exercise in this file. Make the tests in
-`two_bucket_test.rb` pass.
+class TwoBucket
+  attr_reader :bucket_1_size, :bucket_2_size, :goal, :start_with_bucket
 
-To get started with TDD, see the `README.md` file in your
-`ruby/two-bucket` directory.
-=end
+  def initialize(bucket_1_size, bucket_2_size, goal,start_with_bucket)
+    @bucket_1_size = bucket_1_size
+    @bucket_2_size = bucket_2_size
+    @goal = goal
+    @start_with_bucket = start_with_bucket
 
+    @state = {
+      bucket_1: {
+        current_volume: 0,
+        max_volume: bucket_1_size
+      },
+      bucket_2: {
+        current_volume: 0,
+        max_volume: bucket_2_size
+      },
+      moves: 0
+    }
+  end
+
+  # return min number of moves
+  def moves
+
+  end
+end

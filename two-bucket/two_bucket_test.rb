@@ -1,4 +1,5 @@
 require 'minitest/autorun'
+require 'minitest/pride'
 require_relative 'two_bucket'
 
 # Common test data version: 1.4.0 edbc86b
